@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доказательство бинома Ньютона</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .proof {
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    sub {
+      vertical-align: sub;
+      font-size: smaller;
+    }
+    .binom sup {
+      vertical-align: top;
+    }
+  </style>
+  
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>Доказательство бинома Ньютона</h1>
+  </header>
+
+  <section>
+    <h2>Введение</h2>
+    <p>
+      Бином Ньютона - это основная формула в алгебре, которая выражает 
+      разложение степеней суммы двух слагаемых. Он назван в честь великого 
+      математика <a href="https://ru.wikipedia.org/wiki/Исаак_Ньютон" target="_blank">Исаака Ньютона</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Формула бинома Ньютона</h2>
+    <p>Бином Ньютона выглядит следующим образом:</p>
+    <p class="proof">\((a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k\)</p>
+    <p>где \(\binom{n}{k} = \frac{n!}{k!(n-k)!}\)</p>
+  </section>
+
+  <section>
+    <h2>Доказательство бинома Ньютона</h2>
+    <p>Доказательство бинома Ньютона проводится методом математической индукции:</p>
+    <h3>База индукции</h3>
+    <p>Для \(n = 0\), \((a + b)^0 = 1\), что совпадает с правой частью формулы, так как \(\binom{n}{k} = 1\) только для \(k = 0\).</p>
+    <h3>Индукционный шаг</h3>
+
+    <p>\[(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k\]</p>
+
+
+    <p>Предположим, что формула верна для \(n = m\):</p>
+    <p class="proof">\((a + b)^m = \sum_{k=0}^{m} \binom{m}{k} a^{m-k} b^k\)</p>
+    <p>Тогда для \(n = m + 1\) имеем:</p>
+    <p class="proof">\((a + b)^{m+1} = (a + b) (a + b)^m = a (a + b)^m + b (a + b)^m\)</p>
+    <p>Используя предположение индукции, получаем:</p>
+    <p class="proof">\(= a \sum_{k=0}^{m} \binom{m}{k} a^{m-k} b^k + b \sum_{k=0}^{m} \binom{m}{k} a^{m-k} b^k\)</p>
+    <p>Разделив сумму на два отдельных выражения, мы получаем:</p>
+    <p class="proof">\(= \sum_{k=0}^{m} \binom{m}{k} a^{m+1-k} b^k + \sum_{k=0}^{m} \binom{m}{k} a^{m-k} b^{k+1}\)</p>
+    <p>Преобразуя индексы в суммах и объединяя их, получаем:</p>
+    <p class="proof">\(= \sum_{k=0}^{m+1} \left( \binom{m}{k} + \binom{m}{k-1} \right) a^{m+1-k} b^k\)</p>
+    <p>Замечаем, что \(\binom{m}{k} + \binom{m}{k-1} = \binom{m+1}{k}\), что завершает доказательство.</p>
+  </section>
+
+  <section>
+    <h2>Биографии математиков</h2>
+    <ul>
+      <li><a href="https://ru.wikipedia.org/wiki/Исаак_Ньютон" target="_blank">Исаак Ньютон</a></li>
+      <li><a href="https://ru.wikipedia.org/wiki/Блез_Паскаль" target="_blank">Блез Паскаль</a></li>
+      <li><a href="https://ru.wikipedia.org/wiki/Тейлор_Брук" target="_blank">Брук Тейлор</a></li>
+    </ul>
+  </section>
+</body>
+</html>

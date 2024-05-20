@@ -1,0 +1,12 @@
+/*!
+
+@file algorithms.dox
+@author Mikhail Lozhnikov, Ayzat Rizatdinov (dov4k1n)
+
+@page algorithms Алгоритмы
+
+Список реализованных алгоритмов:
+
+@topological_sort Топологическая сортировка
+
+*/
