@@ -224,7 +224,7 @@ void MyVector<T>::sort() {
 
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const MyVector<T>& MyVector) {
-  out << "[";
+  out << "{";
 
   auto it = MyVector.begin();
 
@@ -234,11 +234,11 @@ std::ostream& operator<<(std::ostream& out, const MyVector<T>& MyVector) {
   }
 
   while (it != MyVector.end()) {
-    out << ", " << *it;
+    out << "," << *it;
     ++it;
   }
 
-  out << "]";
+  out << "}";
 
   return out;
 }
